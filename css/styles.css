@@ -12,19 +12,18 @@ body {
     background: #EBEEF7;
 }
 
+.ads {
+    width: 100%;
+    padding: 0;
+}
+
 .heading01 {
     font-weight: 600;
     font-size: 40px;
     line-height: 48px;
+    text-align: center;
 }
 
-.ads__card {
-    background-color: white;
-    height: fit-content;
-    width: fit-content;
-    border-radius: 8px;
-    overflow: hidden;
-}
 
 .ads__card__badge {
     display: flex;
@@ -67,12 +66,14 @@ body {
 }
 
 .ads__card {
-    margin: 12px;
     font-family: 'Nunito', sans-serif;
-    font-style: normal;
-    width: 312px;
+    background-color: white;
     height: 391px;
+    width: 312px;
+    border-radius: 8px;
+    overflow: hidden;
 }
+
 
 .ads__card>* {
     text-decoration: none;
