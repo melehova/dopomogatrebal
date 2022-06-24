@@ -67,6 +67,8 @@ body {
     margin: 12px;
     font-family: 'Nunito', sans-serif;
     font-style: normal;
+    width: 312px;
+    height: 391px;
 }
 
 .ads__card__category {
@@ -93,6 +95,10 @@ body {
     flex: none;
     order: 1;
     flex-grow: 0;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .ads__card__heading__heading {
@@ -109,7 +115,8 @@ body {
     flex: none;
     order: 1;
     flex-grow: 0;
-    border-top: 1px solid #EBEEF7;;
+    border-top: 1px solid #EBEEF7;
+    ;
 }
 
 .fun-facts__location {
@@ -127,6 +134,11 @@ body {
     background-size: auto;
     background-repeat: no-repeat;
     padding: 0 0 8px 22px;
+    width: 50%;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .fun-facts__price {
