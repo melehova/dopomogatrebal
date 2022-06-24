@@ -71,6 +71,10 @@ body {
     height: 391px;
 }
 
+.ads__card > * {
+    text-decoration: none;
+}
+
 .ads__card__category {
     font-size: 14px;
     line-height: 20px;
