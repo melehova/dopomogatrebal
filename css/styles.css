@@ -27,11 +27,6 @@ body {
 }
 
 .ads__card__badge {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 14px;
-    text-transform: uppercase;
-    color: #FFFFFF;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -39,16 +34,24 @@ body {
     padding: 4px 32px;
     gap: 5px;
 
+    position: absolute;
     width: 121px;
     height: 22px;
-    left: -48px;
-    top: 37px;
+    left: -28px;
+    top: 20px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height, or 117% */
+
+    text-transform: uppercase;
+
+    /* Grayscale/White */
+
+    color: #FFFFFF;
+
     background: #FF4F4F;
-
-    flex: none;
-    order: 4;
-    flex-grow: 0;
-
     transform: rotate(-45deg);
     position: absolute;
 }
@@ -71,7 +74,7 @@ body {
     height: 391px;
 }
 
-.ads__card > * {
+.ads__card>* {
     text-decoration: none;
 }
 
