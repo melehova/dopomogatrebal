@@ -16,7 +16,20 @@ body {
     font-weight: 600;
     font-size: 40px;
     line-height: 48px;
+
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+
+    /* Grayscale/900 */
+    color: #191F33;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
+
 
 .ads__card {
     background-color: white;
