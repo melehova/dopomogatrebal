@@ -184,6 +184,11 @@ body {
     content: "$";
 }
 
+.ads__button{
+    display: flex;
+    justify-content: center;
+}
+
 .ads__button__view{
 
     /* Button */
@@ -200,20 +205,41 @@ body {
 }
 
 .ads__button__text{
-
+    
     width: 72px;
     height: 50px;
-    
+    margin-left:20px;
+
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 16px;
     line-height: 50px;
     
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-transform: capitalize;
+    color: #FFFFFF;
+
+}
+
+
+.ads__button__text::after{
+    
+    width: 72px;
+    height: 50px;
+    margin-left:20px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 50px;
     
     color: #FFFFFF;
+
+    background-image: url('../media/ArrowRight.svg');
+    background-position: right auto;
+    background-size: auto;
+    background-repeat: no-repeat;
+    padding: 8px, 13px, 13px, 13px;
+    width: 50%;
+     
 }
