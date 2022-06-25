@@ -60,6 +60,7 @@ body {
     height: 250px;
     background: rgba(174, 179, 194, 1);
     overflow:hidden;
+    position: relative;
 }
 
 .ads__card__image img{
@@ -68,7 +69,6 @@ body {
     position: center;
     overflow:hidden;
 }
-
 
 
 .ads__card {
