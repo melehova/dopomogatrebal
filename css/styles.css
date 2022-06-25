@@ -210,8 +210,7 @@ body {
     height: 50px;
     margin-left:20px;
 
-    font-family: 'Nunito Sans';
-    font-style: normal;
+    font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 50px;
@@ -219,27 +218,14 @@ body {
     color: #FFFFFF;
 
 }
-
 
 .ads__button__text::after{
     
-    width: 72px;
-    height: 50px;
-    margin-left:20px;
-
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 50px;
-    
-    color: #FFFFFF;
-
-    background-image: url('../media/ArrowRight.svg');
-    background-position: right auto;
-    background-size: auto;
-    background-repeat: no-repeat;
-    padding: 8px, 13px, 13px, 13px;
-    width: 50%;
-     
+    content: url('../media/ArrowRight.svg');
+ 
+    position: absolute;
+    padding-top: 6px;
+    padding-bottom: 13px;
+    padding-left: 8px;
 }
+
