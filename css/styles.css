@@ -55,23 +55,21 @@ body {
     position: absolute;
 }
 
-.ads__card__image {
+.ads__card__image{
     width: 312px;
     height: 250px;
     background: rgba(174, 179, 194, 1);
-    position: relative;
     overflow:hidden;
 }
 
-.ads__card__bg img{
-    position: absolute;
-   top:50%;
-   left:50%;
-   transform:translate(-50%,-50%);
-   width:312px;
-   height:250px;
-   object-fit:cover;
+.ads__card__image img{
+    width: 312px;
+    height: 250px;
+    position: center;
+    overflow:hidden;
 }
+
+
 
 .ads__card {
     font-family: 'Nunito', sans-serif;
