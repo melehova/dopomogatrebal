@@ -15,9 +15,9 @@
     <div class="container my-2">
         <div class="search-block d-flex flex-md-row flex-column justify-content-between align-items-center p-1">
             <input class="search__input-field mx-1" tabindex="1" placeholder="Ads tittle, keyword..." />
-            <div class="search__dropdown d-flex flex-row justify-content-between justify-content-md-end align-items-start">
+            <div class="search__dropdown d-flex flex-row flex-wrap flex-sm-nowrap justify-content-between justify-content-md-end align-items-start">
                 <div class="dropdown">
-                    <button onclick="myFunction(this);" class="search__dropdown__select">All Category</button>
+                    <button onclick="toggle(this);" class="search__dropdown__select">All Category</button>
                     <div class="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button onclick="myFunction(this);" class="search__dropdown__select">Recently posted</button>
+                    <button onclick="toggle(this);" class="search__dropdown__select">Recently posted</button>
                     <div class="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button onclick="myFunction(this);" class="search__dropdown__select">All</button>
+                    <button onclick="toggle(this);" class="search__dropdown__select">All</button>
                     <div id="myDropdown" class="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
@@ -49,7 +49,7 @@
     <script>
         /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-        function myFunction(btn) {
+        function toggle(btn) {
             btn.nextElementSibling.classList.toggle("show");
             btn.classList.toggle("opened")
         }
