@@ -12,11 +12,6 @@ body {
     background: #fff;
 }
 
-.search-block {
-    /* width: 984px;
-    height: 56px; */
-}
-
 .search__input-field {
     box-sizing: border-box;
     width: 380px;
@@ -65,7 +60,7 @@ body {
     font-size: 14px;
 }
 
-.ads-dashboard {}
+/* .ads-dashboard {} */
 
 .ads__card {
     padding: 12px;
@@ -167,7 +162,7 @@ body {
 .active::before {
     width: 18px;
     height: 18px;
-    content: url('../media/active.svg');
+    content: url('../media/Check.svg');
 }
 
 .expire::after {
@@ -185,7 +180,7 @@ body {
 .expire::before {
     width: 18px;
     height: 18px;
-    content: url('../media/expire.svg');
+    content: url('../media/X.svg');
 }
 
 .ads__card__buttons {
@@ -203,14 +198,34 @@ body {
     align-items: center;
     width: 102px;
     height: 50px;
-    left: 0px;
-    top: 0px;
     border: 0;
-    color: #F5F7FA;
+    /* color: #F5F7FA; */
     border-radius: 4px;
+
+    /* padding-left: 52px; */
+    padding: 0 20px 0 52px;
+
+    font-family: 'Nunito Sans';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 50px;
+    color: #464D61;
+    background-color: #F5F7FA;
+
+    background-image: url(../media/PencilLine.svg);
+    background-repeat: no-repeat;
+    background-position: left 20px top 50%;
+    cursor: pointer;
 }
 
+.ads__card__edit:hover {
+    background-color: #00AAFF;
+    background-image: url(../media/PencilLine-active.svg);
+    color: #fff;
+}
 
+/* ads__card__edit */
+/* 
 .ads__card__edit__text {
     padding-left: 8px;
 
@@ -219,10 +234,10 @@ body {
     font-size: 16px;
     line-height: 50px;
     color: #464D61;
-}
+} */
 
 .ads__drop__button {
-    
+
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -230,20 +245,21 @@ body {
     gap: 10px;
     width: 50px;
     height: 50px;
-    
+
     border-radius: 4px;
     border: none;
 
- 
-    background: url("../media/bldot.svg") center;
     background-color: #F5F7FA;
+    background-image: url(../media/DotsThree.svg);
     background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
 }
 
-.ads__drop__button:focus {
-    background: url("../media/whdot.svg") center;
+.ads__drop__button:hover,
+.opened {
+    background-image: url(../media/DotsThree-active.svg);
     background-color: #00AAFF;
-    background-repeat: no-repeat;
 }
 
 .dropdown {
@@ -255,7 +271,7 @@ body {
     display: none;
     position: absolute;
     box-sizing: border-box;
-  
+
     padding: 12px;
     width: 234px;
     height: 140px;
@@ -268,6 +284,7 @@ body {
     overflow: auto;
     right: 0;
     z-index: 1;
+    margin: 5px 0;
 }
 
 .dropdown-content a {
@@ -298,8 +315,7 @@ body {
     display: block;
 }
 
-.ads__button__dot{
+.ads__button__dot {
     display: inline-block;
-    margin:auto;
+    margin: auto;
 }
-
