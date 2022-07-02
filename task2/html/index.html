@@ -13,14 +13,37 @@
 
 <body>
   <div class="container my-2">
-    <div class="search-block d-flex flex-row justify-content-between align-items-center">
-      <input class="search__input-field" placeholder="Ads tittle, keyword..." />
-      <div class="search__dropdown d-flex flex-row justify-content-between align-items-start">
-        <div class="search__dropdown__select">All Category</div>
-        <div class="search__dropdown__select">Recently posted</div>
-        <div class="search__dropdown__select">All</div>
-      </div>
+    <div class="search-block d-flex flex-md-row flex-column justify-content-between align-items-center p-1">
+        <input class="search__input-field mx-1" placeholder="Ads tittle, keyword..." />
+        <div class="search__dropdown d-flex flex-row flex-wrap flex-sm-nowrap justify-content-between justify-content-md-end align-items-start">
+            <div class="dropdown">
+                <button onclick="toggle(this);" class="search__dropdown__select">All Category</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="toggle(this);" class="search__dropdown__select">Recently posted</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="toggle(this);" class="search__dropdown__select">All</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+        </div>
     </div>
+
+
 
     <div class="ads-navigation d-flex flex-row justify-content-start align-items-center">
       <div class="ads__navigation" style="width: 36.936%">Ads</div>
@@ -109,6 +132,7 @@
     </div>
   </div>
 
+
   <script>
     /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -117,9 +141,10 @@ toggle between hiding and showing the dropdown content */
         btn.classList.toggle("opened")
     }
 
+  
     // Close the dropdown menu if the user clicks outside of it
     window.onclick = function (event) {
-        if (!event.target.matches('.ads__drop__button')) {
+        if (!(event.target.matches('.ads__drop__button') || event.target.matches('.search__dropdown__select'))) {
             var dropdowns = document.getElementsByClassName("dropdown-content");
             var i;
             for (i = 0; i < dropdowns.length; i++) {
