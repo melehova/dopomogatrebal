@@ -6,6 +6,9 @@
     font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 body {
@@ -64,10 +67,6 @@ body {
     cursor: pointer;
 }
 
-/* .opened {
-    background-color: aqua;
-} */
-
 .search__dropdown__select.opened::after {
     position: absolute;
     content: '';
@@ -86,51 +85,11 @@ body {
     transform: rotate(180deg);
 }
 
-/* Dropdown button on hover & focus */
-.dropbtn:hover,
-.dropbtn:focus {
-    background-color: #F5F7FA;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: #ddd
-}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {
-    display: block;
-}
-
 .ads-navigation {
     width: 984px;
     height: 40px;
 
-    padding: 32px 0px 20px;
+    margin: 32px 0px 20px;
     gap: 24px;
 
     /* Grayscale/White */
@@ -173,16 +132,25 @@ body {
 }
 
 .ads__card__image {
-
     width: 80px;
     height: 80px;
-
     background: url(.png);
-    position: center;
     border-radius: 8px;
-
     background: rgba(174, 179, 194, 1);
 }
+
+/* i`ve tried to make responsive square*/
+
+/* .ads__card__image > img {
+    width: 100%;
+    height: 100%;
+}
+
+  .ads__card__image > img::after {
+    content: "";
+    display: block;
+    padding-bottom: 200%;
+  } */
 
 .ads__card__name {
     width: 208px;
@@ -311,20 +279,7 @@ body {
     color: #fff;
 }
 
-/* ads__card__edit */
-/* 
-.ads__card__edit__text {
-    padding-left: 8px;
-
-    font-family: 'Nunito Sans';
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 50px;
-    color: #464D61;
-} */
-
 .ads__drop__button {
-
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -402,16 +357,23 @@ body {
     display: block;
 }
 
-.ads__button__dot {
-    display: inline-block;
-    margin: auto;
+.w-36 {
+    width: 36.936%;
 }
 
-@media (min-width: 1200px) {
+.w-14 {
+    width: 14.864%;
+}
+
+.w-18 {
+    width: 18.472%;
+}
+
+@media only screen and (min-width: 1200px) {
     /* Стили для устройств с большой шириной экрана >1200px */
 }
 
-@media (min-width: 767px) and (max-width:1199px) {
+@media only screen and (min-width: 640px) and (max-width:1200px) {
     /* Стили для устройств с маленьким экраном, размерами 768px - 1199px (планшеты и подобные) */
 
     .search__input-field {
@@ -433,51 +395,52 @@ body {
     }
 
     .ads-dashboard {
-        width: 581px;
+        /* width: 581px; */
+        width: 100%;
+        
     }
 
     .ads-navigation {
-        width: 578px;
+        /* width: 578px; */
+        width: 100%;
         height: 40px;
     }
 
     .ads__card {
-        width: 581px;
+        /* width: 581px; */
+        width: 100%;
         height: 104px;
         gap: 5px;
     }
 
     .ads__card__info {
-        width: 190px;
+        /* width: 190px; */
+        width: 36.936%;
         height: 79px;
         gap: 4px;
     }
 
     .ads__card__image {
-
         width: 70px;
         height: 70px;
-
-
     }
 
     .ads__card__name {
-        width: 111px;
+        /* width: 111px; */
         height: 75px;
-
         font-size: 14px;
     }
 
     .ads__card__date {
-
-        width: 80px;
+        /* width: 80px; */
+        width: 14.864%;
         height: 20px;
         font-size: 12px;
     }
 
     .ads__card__price {
-
-        width: 80px;
+        /* width: 80px; */
+        width: 14.864%;
         height: 20px;
         font-size: 12px;
     }
@@ -487,8 +450,8 @@ body {
     }
 
     .ads__card__activity {
-        width: 60px;
-
+        width: 14.864%;
+        /* width: 60px; */
     }
 
     .active::after {
@@ -510,19 +473,19 @@ body {
     }
 
     .ads__card__buttons {
-        width: 115px;
+        /* width: 18.472%; */
+        width: 150px;
+        /* width: fit-content + 24px; */
         height: 35px;
         margin-left: 24px;
     }
 
     .ads__card__edit {
         width: 75px;
+        /* width: 100%; */
         height: 35px;
-
         padding: 0 20px 0 52px;
-
         font-size: 12px;
-
         background-position: left 14px top 50%;
         background-size: 16px, 16px;
     }
@@ -533,6 +496,7 @@ body {
 
     .ads__drop__button {
         width: 35px;
+        /* width: 100%; */
         height: 35px;
         background-size: 11px, 11px;
     }
@@ -545,7 +509,6 @@ body {
     .dropdown-content {
         width: 200px;
         height: 133px;
-
     }
 
     .dropdown-content a {
@@ -576,11 +539,37 @@ body {
         display: block;
     }
 
-    .ads__button__dot {
+    /* .ads__button__dot {
         display: inline-block;
         margin: auto;
-    }
+    } */
 
 }
 
-@media (min-width: 576px) {}
+/* @media screen and (min-width: 320px) and (max-width:576px) { */
+@media only screen and (max-width:640px) {
+
+
+    /* Styles for devices with the smallest width 320px - 567px (smartphones) */
+    /* Styles for ads list and ads cards */
+    .ads-navigation {
+        display: none !important;
+    }
+
+    .ads__card {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column!important;
+        justify-content: center;
+        align-items: center;
+        padding: 12px;
+        gap: 3px;
+    }
+
+    .ads__card__info {
+        width: -moz-fit-content;
+        width: fit-content;
+        height: max-content;
+    }
+}
