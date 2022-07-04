@@ -19,6 +19,7 @@ body {
     padding: 0px;
     gap: 27px;
     font-size: 14px;
+
 }
 
 .search__input-field:focus {
@@ -84,7 +85,6 @@ body {
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
 }
-
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover,
