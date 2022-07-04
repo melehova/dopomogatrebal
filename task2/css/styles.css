@@ -43,6 +43,7 @@ body {
 .search__dropdown {
     width: 100%;
     max-width: 512px;
+    gap: 5px;
 }
 
 .search__dropdown__select {
