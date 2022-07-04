@@ -41,6 +41,29 @@
             <a href="#">Link 3</a>
           </div>
         </div>
+
+        <div class="dropdown">
+          <button onclick="toggle(this);" class="search__dropdown__select">All Category</button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+
+
+        <form name="form1" id="form1" action="/action_page.php">
+          Filter: <select name="filters" id="filters">
+            <option value="" selected="selected">Select Filters Group</option>
+          </select>
+          <br><br>
+          : <select name="filter" id="filter" disabled="disabled">
+            <option value="" selected="selected">Select Filter</option>
+          </select>
+          <br><br>
+          <input type="submit" value="Filter">
+        </form>
+
       </div>
     </div>
 
@@ -57,7 +80,7 @@
       <div class="ads__card d-flex flex-row align-items-center">
         <div class="ads__card__info">
           <div class="ads__card__image">
-          <img src="../media/p1.jpg"/>
+            <img src="../media/p1.jpg" />
           </div>
           <div class="ads__card__name">Canon EOS Rebel SL3 / EOS 250D</div>
         </div>
@@ -134,6 +157,45 @@ toggle between hiding and showing the dropdown content */
             openDropdown.classList.remove('show');
             openDropdown.previousElementSibling.classList.remove("opened")
           }
+        }
+      }
+    }
+
+
+    var subjectObject = {
+      "All Category": {
+        "HTML": ["Links", "Images", "Tables", "Lists"],
+        "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
+        "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
+      },
+      "Recently posted": {
+        "PHP": ["Variables", "Strings", "Arrays"],
+        "SQL": ["SELECT", "UPDATE", "DELETE"]
+      },
+      "All": {
+        "PHP": ["Variables", "Strings", "Arrays"],
+        "SQL": ["SELECT", "UPDATE", "DELETE"],
+        "HTML": ["Links", "Images", "Tables", "Lists"],
+        "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
+        "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
+      }
+    }
+    window.onload = function () {
+      var filtersSel = document.getElementById("filters");
+      var filterSel = document.getElementById("filter");
+      for (var x in subjectObject) {
+        filtersSel.options[filtersSel.options.length] = new Option(x, x);
+      }
+      filtersSel.onchange = function () {
+        //empty Chapters- and Topics- dropdowns
+        filterSel.length = 1;
+        if (subjectObject[this.value])
+          filterSel.removeAttribute('disabled')
+        else
+          filterSel.setAttribute('disabled', 'disabled')
+        //display correct values
+        for (var y in subjectObject[this.value]) {
+          filterSel.options[filterSel.options.length] = new Option(y, y);
         }
       }
     }

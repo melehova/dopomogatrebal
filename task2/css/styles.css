@@ -592,4 +592,9 @@ body {
         width: fit-content;
         height: max-content;
     }
+
+    .ads__card__buttons {
+        justify-content: space-evenly;
+        width: 100%;
+    }
 }
