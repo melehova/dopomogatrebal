@@ -139,6 +139,14 @@ body {
     background: rgba(174, 179, 194, 1);
 }
 
+.ads__card__image img {
+    width: 80px;
+    height: 80px; 
+    border-radius: 8px;
+    position: center;
+    overflow: hidden;
+}
+
 /* i`ve tried to make responsive square*/
 
 /* .ads__card__image > img {
@@ -430,6 +438,11 @@ body {
     .ads__card__image {
         width: 70px;
         height: 70px;
+    }
+
+    .ads__card__image img {
+        width: 70px;
+        height: 70px; 
     }
 
     .ads__card__name {
