@@ -1,5 +1,5 @@
 {
-    "root": "public/",
+    "root": "src/",
     "https_only": true,
     "headers": {
         "/**": {
